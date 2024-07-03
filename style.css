@@ -4,7 +4,60 @@
     margin: 0;
     /* outline: 1px solid red; */
 }
-.container-fluid{
-    height: 100vh;
+
+/* Conteneur principal */
+.container-fluid {
     background-color: rgb(253, 240, 227);
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Boîte de tâches */
+.taches > div {
+    display: flex;
+    flex-wrap: wrap; /* Permet le wrapping des éléments */
+    gap: 5px;
+}
+
+/* Nom de la tâche */
+.taches span {
+    flex: 1 1 auto; /* Prend tout l'espace disponible */
+    word-break: break-word; /* Permet le retour à la ligne des longs mots */
+}
+
+/* Boutons */
+.taches button {
+    flex: 0 1 auto; /* Permet le wrapping des boutons */
+}
+
+/* Icônes */
+.taches div > div {
+    flex: 0 1 auto; /* Permet le wrapping des icônes */
+    display: flex;
+    align-items: center;
+}
+
+/* Marges et paddings ajustés */
+@media (max-width: 576px) {
+    .taches > div {
+        padding: 5px;
+        margin: 2px;
+    }
+
+    .taches button {
+        padding: 0 5px;
+        margin: 0 2px;
+    }
+
+    .taches span {
+        margin-bottom: 5px;
+    }
+
+    .taches div > div {
+        padding: 0 5px;
+        margin: 0 2px;
+    }
 }
